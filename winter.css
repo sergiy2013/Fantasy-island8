@@ -4,7 +4,7 @@ body {
   font-family: 'Open Sans', sans-serif;
   background: linear-gradient(to bottom, #e0f7fa, #bbdefb);
   color: #033046;
-  background-image: url(pngtree-fairy-winter-landscape-image_16585633.jpg);
+  background-image: url('images/pngtree-fairy-winter-landscape-image_16585633.jpg');
 }
 
 header {
