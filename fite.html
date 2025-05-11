@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>⚔️ Битва з Ігнісом</title>
+  <link rel="stylesheet" href="fite.css"/>
+</head>
+<body>
+  <div class="overlay"></div>
+  <div class="battlefield">
+    <h1>🔥 Битва з Ігнісом</h1>
+
+    <div class="boss-container">
+      <img src="Designerва.jpeg" alt="Ігніс" class="boss-img" />
+      <div class="health-bar">
+        <div class="health" id="health"></div>
+      </div>
+    </div>
+
+    <button class="attack-btn" onclick="attackBoss()">⚔️ Атакувати</button>
+    <p id="message" class="message">Готуйся до бою!</p>
+  </div>
+
+  <script>
+    let health = 100;
+
+    function attackBoss() {
+      const damage = Math.floor(Math.random() * 15) + 5;
+      health = Math.max(0, health - damage);
+      document.getElementById("health").style.width = health + "%";
+
+      const msg = document.getElementById("message");
+      if (health > 0) {
+        msg.textContent = `🔥 Ти наніс ${damage} шкоди! У Ігніса залишилось ${health}% HP`;
+      } else {
+        msg.textContent = "🎉 Перемога! Ігніс повалений!";
+        document.querySelector(".attack-btn").disabled = true;
+        document.querySelector(".attack-btn").classList.add("disabled");
+      }
+    }
+  </script>
+</body>
+</html>
