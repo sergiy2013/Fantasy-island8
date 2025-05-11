@@ -1,0 +1,107 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Trebuchet MS', sans-serif;
+  background-image: url('volcanic-battlefield.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #fff3e0;
+  text-align: center;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 0;
+}
+
+.battlefield {
+  position: relative;
+  z-index: 1;
+  padding: 60px 20px;
+  max-width: 800px;
+  margin: auto;
+  background: rgba(30, 0, 0, 0.75);
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(255, 87, 34, 0.9);
+  backdrop-filter: blur(6px);
+}
+
+h1 {
+  font-size: 48px;
+  color: #ff6f00;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 8px #000;
+}
+
+.boss-container {
+  margin: 30px 0;
+}
+
+.boss-img {
+  width: 300px;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(255, 111, 0, 0.8);
+  animation: float 2s ease-in-out infinite alternate;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-10px); }
+}
+
+.health-bar {
+  width: 100%;
+  height: 26px;
+  background: #2e0707;
+  border: 2px solid #ff3d00;
+  border-radius: 14px;
+  margin-top: 20px;
+  overflow: hidden;
+}
+
+.health {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(90deg, #ff3d00, #ffa726);
+  transition: width 0.4s ease-in-out;
+}
+
+.attack-btn {
+  background-color: #d84315;
+  color: #fff;
+  font-size: 22px;
+  padding: 16px 36px;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  margin-top: 40px;
+  box-shadow: 0 0 20px rgba(255, 111, 0, 0.8);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.attack-btn:hover {
+  background-color: #bf360c;
+  transform: scale(1.05);
+}
+
+.attack-btn.disabled {
+  background-color: #4e342e;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+
+.message {
+  margin-top: 24px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffe0b2;
+  text-shadow: 1px 1px 4px #000;
+}
