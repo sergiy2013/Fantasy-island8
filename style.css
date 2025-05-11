@@ -1,0 +1,93 @@
+body {
+    margin: 0;
+    padding: 40px 20px 20px 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to bottom right, #c2e9fb, #a1c4fd);
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+}
+
+h1 {
+    font-size: 3em;
+    color: #00796b;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    font-family: "Lobster", sans-serif;
+}
+
+h2 {
+    font-size: 1.5em;
+    color: #5d4037;
+    max-width: 800px;
+    background-color: #f1f8e9;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    line-height: 1.6;
+}
+
+.map {
+    background-image: url('main/a7bfa256-98fc-4608-905b-ac5c874588a8.png');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 1080px;
+    position: relative;
+    z-index: 0;
+    margin-top: 30px;
+}
+
+.button-ice, .button-forest, .button-desert, .button-volcano {
+    position: absolute; 
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.5s;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 2px 5px 
+}
+
+.button-ice {
+    background-color: rgba(173, 216, 230, 0.9); 
+    color: #003c6c;
+    border: 2px solid #81d4fa;
+}
+.button-ice:hover {
+    background-color: #b3e5fc;
+    color: #002744;
+}
+.button-forest {
+    background-color: rgba(200, 230, 201, 0.9); 
+    color: #2e7d32;
+    border: 2px solid #81c784;
+}
+.button-forest:hover {
+    background-color: #a5d6a7;
+    color: #1b5e20;
+}
+.button-desert {
+    background-color: rgba(255, 236, 179, 0.9); 
+    color: #8d6e63;
+    border: 2px solid #ffcc80;
+}
+.button-desert:hover {
+    background-color: #ffe082;
+    color: #5d4037;
+}
+.button-volcano {
+    background-color: rgba(255, 138, 128, 0.9); 
+    color: #4e342e;
+    border: 2px solid #ef5350;
+}
+.button-volcano:hover {
+    background-color: #ef9a9a;
+    color: #3e2723;
+}
